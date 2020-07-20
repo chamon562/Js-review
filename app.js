@@ -47,7 +47,7 @@ const musicGenre = {
 
     },
     print: function(){
-        console.log('My kind of music is' + this.rap)
+        console.log('This is okay'+ this.rap)
     }
 
 }
@@ -166,3 +166,112 @@ headerThree.addEventListener('click', function(){
 // orderlist
 // 1.friends 1
 
+//Proble solving 
+
+
+//what do i star with 
+//what do i hope to end up with what result am i trying to get
+
+//understand the problem
+//where the issue start and... 
+
+//break it down into more managable problems
+
+
+//Fizzbuzz 
+// write a function that does the following 
+// takes in an array 
+// check each number in the array
+//if its divisable by 3 and 5 and === fizzbuzz
+//if number is divisable by 3 === fizz 
+//if the number is divsible by 5 === 'Buzz' 
+
+// for example: [3, 5, 15, 20, 9, 7]
+//['Fizz', 'Buzz', 'FizzBuzz', 'Buzz', 'Fizz', 7]
+//return an array
+
+//I need to setup an empty array 
+//iterate through the array that going to be passed in
+//check to see if divisible
+//check the remainer of each element with % mod sign
+//push result of each element into result array
+//return that result array 
+
+function fizzBuzz(array){
+    // let result return empty array []
+    let result = [] //will push in Fizz, Buzz, FizzBuzz, Buzz, Fizz, num which is 7
+
+    for(let i =0; i < array.length; i++){
+        let num = array[i] //going to grab each element then see that number
+        console.log(num); // thi will print 3, 5, 15
+        // meed conditional
+        if (num % 3 === 0 && num % 5 === 0){
+            //do something if those both are true
+            result.push('FizzBuzz');
+        } else if(num % 3 === 0){
+            //do something else
+            result.push('Fizz');
+        } else if(num % 5 === 0){
+            // do something else
+            result.push('Buzz');
+        } else {
+            result.push(num);
+        }
+
+    }
+
+    return result;
+}
+// const numbers = [3, 5, 15, 20, 9, 7]
+console.log(fizzBuzz([3, 5, 15, 20, 9, 7]));
+
+// Write a function `isInside(array, ele)` that returns true if `ele` is an element
+// inside of the `array`, false otherwise.
+//
+// HINT: use indexOf
+//
+// isInside(['taylor', 'rome', 'adam'], 'rome'); // => true
+// isInside(['pete', 'adam', 'taylor'], 'fred'); // => false
+
+// need to have a for each. element 
+//compare the elements 
+//variety of booleans  to return true or false 
+//what is the value to hold the booleans
+// if the array returns true or false
+
+function isInside(array, ele){
+    let result = false;
+    for(let i = 0; i < array.length; i++){
+        if(i === ele){
+            result = true;
+            break;
+
+        } 
+        console.log(result);
+    }
+    return result;
+}
+
+console.log(isInside(['taylor', 'rome', 'adam'], 'rome'));
+
+// Write a function `reverseStr(str)` that takes in a string as a parameter and
+// returns the string but with the characters in reverse.
+//
+// Examples:
+//
+// reverseStr('bootcamp'); //=> 'pmactoob'
+// reverseStr('General Assembly'); //=> 'ylbmessA lareneG'
+
+// create function that
+// create string 
+// how to reverse string
+// returns strings but in reverse 
+
+function reverseStr(str){
+    let newStr = ''
+    let newArr = str.split('');
+    newStr = newArr.reverse()
+    newStr = newArr.join()
+    return newStr;
+}
+console.log(reverseStr('bootcamp'));

@@ -94,5 +94,41 @@ console.log(list);
 headerThree.addEventListener('click', function(){
     container.appendChild(list);
 });
+```
+
+``` javascript
+
+function isInside(array, ele){
+    let result = false;
+    for(let i = 0; i < array.length; i++){
+        if(i === ele){
+            result = true;
+            break;
+
+        } 
+        console.log(result);
+    }
+    return result;
+}
+
+console.log(isInside(['taylor', 'rome', 'adam'], 'rome'));
 
 ```
+
+Channe and Margaret worked on problem 1 
+
+
+``` javascript 
+function reverseStr(str){
+    let newStr = ''
+    let newArr = str.split('');
+    newStr = newArr.reverse()
+    newStr = newArr.join()
+    return newStr;
+}
+console.log(reverseStr('bootcamp'));
+
+
+```
+
+channee and margaret worked on problem 2
