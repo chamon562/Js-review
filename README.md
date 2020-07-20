@@ -66,3 +66,33 @@ headerTwo.classList.remove('header-two');
 console.log(headerTwo);
 
 ```
+
+### More Dom Manipulation
+``` javascript
+const list = document.createElement('ul');
+
+//so when i click on friends it shows all friends
+//listen for click on friends
+//create an element reference that arra at each element then append under friends
+
+//pseudo code writ out some type of idea
+//iterate through my friends array 
+for(let i = 0; i < myArray.length; i++){
+    let eachFriend = myArray[i];
+    // console.log(eachFriend);
+    //now create li
+    const listItem = document.createElement('li');
+    listItem.textContent = eachFriend;
+    // console.log(listItem);
+
+    //now take each item and append it
+    list.appendChild(listItem);
+}
+//once i click on headerThree append that ul to that friends to that container
+console.log(list);
+//doig outside forloop because its listening for a click
+headerThree.addEventListener('click', function(){
+    container.appendChild(list);
+});
+
+```
