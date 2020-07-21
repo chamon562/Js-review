@@ -255,6 +255,8 @@ function isInside(array, ele){
 
 }
 console.log(isInside(['taylor', 'rome', 'adam'],'rome'));
+console.log(isInside(['pete', 'adam', 'taylor'], 'fred'));
+
 // Write a function `reverseStr(str)` that takes in a string as a parameter and
 // returns the string but with the characters in reverse.
 //
@@ -268,15 +270,18 @@ console.log(isInside(['taylor', 'rome', 'adam'],'rome'));
 // how to reverse string
 // returns strings but in reverse 
 
+//Game plan was to break it down because multiple things needed to happen
+// first its a string and needed to split it
+// "The split() method is used to split a String object into an 
+// array of strings by separating the string into substrings.""
+//once string broke down into an array can use reverse
+// Then join() method is used to join all elements of an array into a string.
+//was able to follow along better understanding through chain method during research
 function reverseStr(str){
-    let newStr = ' ';
-    let newArr = str.split('');
-    newStr = newArr.reverse(' ');
-    newStr = newArr.join();
-    return newStr;
+    return str.split('').reverse().join('')
 }
 console.log(reverseStr('bootcamp'));
-
+console.log(reverseStr('General Assembly'));
 
 // Write a function `luckySevens(max)` that returns an array of all numbers up
 // to max (inclusive) that are divisible by 7.
