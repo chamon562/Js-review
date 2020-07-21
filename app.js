@@ -31,7 +31,7 @@ const tesla = {
 tesla.stockPrice = 1643.00;
 
 console.log(tesla);
-// console.Log(tesla.vehicles.vehicleThree);
+tesla.vehicles.vehicleThree;
 console.log(tesla['vehicles']['vehicleThree']);
 
 tesla.print();
@@ -223,7 +223,7 @@ function fizzBuzz(array){
     return result;
 }
 // const numbers = [3, 5, 15, 20, 9, 7]
-console.log(fizzBuzz([3, 5, 15, 20, 9, 7]));
+// console.log(array([3, 5, 15, 20, 9, 7]));
 
 // Write a function `isInside(array, ele)` that returns true if `ele` is an element
 // inside of the `array`, false otherwise.
@@ -240,20 +240,21 @@ console.log(fizzBuzz([3, 5, 15, 20, 9, 7]));
 // if the array returns true or false
 
 function isInside(array, ele){
-    let result = false;
-    for(let i = 0; i < array.length; i++){
-        if(i === ele){
-            result = true;
-            break;
+  //define variable to find the index of ele
+    let result = array.indexOf(ele);
+    // the code is saying of the element rome is in the array 
+    //it will come out true if not else
+    // the -1 value returned if the item is not in there
+    if(array.indexOf(ele) > -1){
+      return true; 
+    } else {
+      return false;
+  }
+    //going to return true because theres an array counting as one object 
+    // and the element outside of the object is being checked to see if its in the array
 
-        } 
-        console.log(result);
-    }
-    return result;
 }
-
-console.log(isInside(['taylor', 'rome', 'adam'], 'rome'));
-
+console.log(isInside(['taylor', 'rome', 'adam'],'rome'));
 // Write a function `reverseStr(str)` that takes in a string as a parameter and
 // returns the string but with the characters in reverse.
 //
@@ -268,10 +269,10 @@ console.log(isInside(['taylor', 'rome', 'adam'], 'rome'));
 // returns strings but in reverse 
 
 function reverseStr(str){
-    let newStr = ''
+    let newStr = ' ';
     let newArr = str.split('');
-    newStr = newArr.reverse()
-    newStr = newArr.join()
+    newStr = newArr.reverse(' ');
+    newStr = newArr.join();
     return newStr;
 }
 console.log(reverseStr('bootcamp'));
