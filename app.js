@@ -245,15 +245,16 @@ function isInside(array, ele){
     // the code is saying of the element rome is in the array 
     //it will come out true if not else
     // the -1 value returned if the item is not in there
-    if(array.indexOf(ele) > -1){
+    if(array.indexOf(ele) > -1) {
       return true; 
     } else {
       return false;
-  }
+    }
     //going to return true because theres an array counting as one object 
     // and the element outside of the object is being checked to see if its in the array
 
 }
+
 console.log(isInside(['taylor', 'rome', 'adam'],'rome'));
 console.log(isInside(['pete', 'adam', 'taylor'], 'fred'));
 
@@ -278,7 +279,16 @@ console.log(isInside(['pete', 'adam', 'taylor'], 'fred'));
 // Then join() method is used to join all elements of an array into a string.
 //was able to follow along better understanding through chain method during research
 function reverseStr(str){
-    return str.split('').reverse().join('')
+    //means split on empty space changes to array
+    let splitString = str.split('');
+    // method reverse everything in array 
+    let reverseString = splitString.reverse();
+    // method join things together 
+    let joinString = reverseString.join('');
+    console.log(joinString);
+    
+    // return str.split('').reverse().join('')
+
 }
 console.log(reverseStr('bootcamp'));
 console.log(reverseStr('General Assembly'));
@@ -300,8 +310,11 @@ function luckySevens(max){
     let result = [];
     for(i = 0; i < max.length; i++){
     let num = max[i]; //going to grab each element then see that number
-    console.log(num); // thi will print 3, 5, 15
-    // meed conditional
+    console.log(num); 
+   
+   // should be if 7 an those numbers in the array goes first and rus through each 
+//    condition to be divisible with no remainder it should print the number but prints all numbers?
+    // need conditional
     if (num % 25 === 0 && num % 42 === 0){
         //do something if those both are true
         result.push(num);
@@ -320,3 +333,72 @@ function luckySevens(max){
 
 console.log(luckySevens([ 7, 14, 21 ]));
 console.log(luckySevens([ 7, 14, 21, 28, 35, 42 ]));
+
+// element is a string 
+const copyMachine = (element, num) => {
+    let result = [];
+    //want to get i equal or greater than number
+    // and get pushed in
+    for(let i = 0; i < num; i++){
+
+    }
+    return result
+}
+
+console.log(copyMachine('mango', 3));
+
+function everOtherWord(sentence) {
+    // result = empty array
+    let result = []
+
+    let splitSentence = sentence.split(' ');
+    console.log(splitSentence);
+    //if you need index pass in element and pass in index
+    for (let i = 0; i < splitSentence.length; i++){
+        //if this is true then do this logic 
+        // one is truthy value 0 is falsy value 
+
+        if(i % 2 === 0){ //2,0 always 0
+            result.push(splitSentence[i]);// empty array [hello]
+        }
+    }
+    return result;
+}
+//                          0     1   2   3    4
+//think about truthy and falsy values 
+console.log(everOtherWord('Hello how are you doing?'));
+
+
+function wordYeller(sentence){
+    // use .split to sepereate the sentence at tthe space
+    let words = sentence.split('')
+// for loop to add '! to each word in sentence
+    for(let i = 0; i < words.length; i++){
+
+        if (punctuationCheck(words[i]));
+        return sentence = words.join(' ');
+    }
+
+
+function punctuationCheck(word){
+    let punctuation = ['!', '?', ';', ':', ',', '.'];
+    for (let m = 0; m < punctuation.length; m++){
+        return false;
+    }
+  }
+  return true;
+}
+
+console.log(wordYeller('I want to, like, go shopping, but I cant find my keys!'));
+
+const wordYellar = (sentence) => {
+
+    let splitArray = sentence.split('')
+    let emptyArray = [];
+    for( let i =0; i < splitArray.length; i++){
+        var word = splitArray.shift()
+        if( letter = '.' || letter == ',' || letter == ){
+            else
+        }
+    }
+}
