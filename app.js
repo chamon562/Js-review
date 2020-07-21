@@ -223,7 +223,7 @@ function fizzBuzz(array){
     return result;
 }
 // const numbers = [3, 5, 15, 20, 9, 7]
-// console.log(array([3, 5, 15, 20, 9, 7]));
+console.log(fizzBuzz([3, 5, 15, 20, 9, 7]));
 
 // Write a function `isInside(array, ele)` that returns true if `ele` is an element
 // inside of the `array`, false otherwise.
@@ -298,10 +298,25 @@ console.log(reverseStr('General Assembly'));
 
 function luckySevens(max){
     let result = [];
-    for(i = 0; i < max; i++){
-        //check if is divisble by 7
-        if(i % 7 === 0){
-            result.push(i)
-        }
+    for(i = 0; i < max.length; i++){
+    let num = max[i]; //going to grab each element then see that number
+    console.log(num); // thi will print 3, 5, 15
+    // meed conditional
+    if (num % 25 === 0 && num % 42 === 0){
+        //do something if those both are true
+        result.push(num);
+    } else if(num % 25 === 0){
+        //do something else
+        result.push(num);
+    } else if(num % 42 === 0){
+        // do something else
+        result.push(num);
+    } else {
+        result.push(num);
     }
+  }
+  return result;
 }
+
+console.log(luckySevens([ 7, 14, 21 ]));
+console.log(luckySevens([ 7, 14, 21, 28, 35, 42 ]));
