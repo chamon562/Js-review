@@ -275,3 +275,27 @@ function reverseStr(str){
     return newStr;
 }
 console.log(reverseStr('bootcamp'));
+
+
+// Write a function `luckySevens(max)` that returns an array of all numbers up
+// to max (inclusive) that are divisible by 7.
+//
+// Examples:
+//
+// luckySevens(25); // => [ 7, 14, 21 ]
+// luckySevens(42); // => [ 7, 14, 21, 28, 35, 42 ]
+
+// create a function  that returns an array divisble by 7
+//also make 
+// need to create for loop that will test each number before the max
+//and push all the numbers to that array 
+
+function luckySevens(max){
+    let result = [];
+    for(i = 0; i < max; i++){
+        //check if is divisble by 7
+        if(i % 7 === 0){
+            result.push(i)
+        }
+    }
+}
