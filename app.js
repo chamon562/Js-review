@@ -391,14 +391,29 @@ function punctuationCheck(word){
 
 console.log(wordYeller('I want to, like, go shopping, but I cant find my keys!'));
 
+
+let generalAssembly = 'This is what it looks like to code';
 const wordYellar = (sentence) => {
 
-    let splitArray = sentence.split('')
+    let splitArray = sentence.split(' ')
     let emptyArray = [];
     for( let i =0; i < splitArray.length; i++){
-        var word = splitArray.shift()
-        if( letter = '.' || letter == ',' || letter == ){
-            else
+        var word = splitArray[i]
+        let lastLetter = word(word.length < -1)
+        if( lastLetter = '.' || lastLetter == ',' || lastLetter == '?' || lastLetter =='!' || lastLetter ==';' || lastLetter == ':'){
+           emptyArray.push(word) 
+        } else {
+            emptyArray.push(word + '!');
         }
     }
+    let finalString = emptyArray.join('')
+    return finalString
 }
+
+
+
+function arraySubString(word, str){
+    
+}
+
+
